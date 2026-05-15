@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "packageManager": "pnpm@10.14.0",
   "scripts": {
     "dev": "npx only-allow pnpm && vite",
     "build": "npx only-allow pnpm && vue-tsc -b && vite build",
