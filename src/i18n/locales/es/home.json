@@ -1,0 +1,72 @@
+{
+  "hero": {
+    "title": "Genera Regex con IA",
+    "description": "Convierte texto natural en expresiones regulares potentes al instante. Optimizado para rendimiento y precision en tu codigo de produccion.",
+    "placeholder": "Ejemplo: regex para validar correos que terminen en gmail.com",
+    "generate": "Generar Regex",
+    "generating": "Generando..."
+  },
+  "actions": {
+    "copyRegex": "Copiar regex",
+    "copyJson": "Copiar como JSON"
+  },
+  "errors": {
+    "emptyPrompt": "Primero escribe que regex necesitas.",
+    "invalidRegex": "El modelo devolvio un regex invalido.",
+    "requestFailed": "No se pudo generar el regex en este momento."
+  },
+  "output": {
+    "title": "Salida Generada",
+    "logicTitle": "Explicacion de la Logica",
+    "logic": "Esta expresion regular asegura que el texto comience con uno o mas caracteres alfanumericos o simbolos permitidos (._%+-), seguido del dominio literal {'@'}gmail.com y termine justo despues.",
+    "tokenBreakdown": "Desglose de Tokens",
+    "anchorsAndFlags": "Anclas y Flags",
+    "edgeCases": "Casos Limite",
+    "performanceNotes": "Notas de Rendimiento",
+    "redosRisk": "Riesgo de ReDoS",
+    "defaultTokenBreakdown": "El modelo no devolvio detalle por tokens.",
+    "defaultAnchorsFlags": "El modelo no devolvio detalle de anclas y flags.",
+    "defaultEdgeCases": "El modelo no devolvio casos limite.",
+    "defaultPerformanceNotes": "El modelo no devolvio notas de rendimiento.",
+    "defaultRedosRisk": "El modelo no devolvio evaluacion de riesgo ReDoS."
+  },
+  "matches": {
+    "valid": "COINCIDENCIAS VALIDAS",
+    "invalid": "COINCIDENCIAS INVALIDAS",
+    "match": "OK",
+    "fail": "ERROR"
+  },
+  "tester": {
+    "title": "Probador en Vivo",
+    "label": "PRUEBA TU TEXTO",
+    "result": "Coincidencia Completa",
+    "count": "1 resultado",
+    "tokenTitle": "DESGLOSE DE TOKENS"
+  },
+  "insights": {
+    "title": "Insights de IA",
+    "description": "Este patron tiene 99.4% de precision para validacion estricta de Gmail, pero no contempla subdireccionamiento (+) en algunos casos.",
+    "button": "Optimizar Casos Limite"
+  },
+  "features": {
+    "performance": {
+      "title": "Alto Rendimiento",
+      "description": "Patrones sin backtracking para mayor seguridad."
+    },
+    "redos": {
+      "title": "Seguro contra ReDoS",
+      "description": "Analizado para evitar ataques de denegacion por regex."
+    },
+    "languages": {
+      "title": "Multi Lenguaje",
+      "description": "Exporta para Python, JS, Go y mas."
+    }
+  },
+  "footer": {
+    "copy": "© 2024 RegexAI. Disenado para precision.",
+    "github": "GitHub",
+    "privacy": "Privacidad",
+    "terms": "Terminos",
+    "api": "API"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "title": "Acerca de",
+  "description": "RegexAI te ayuda a convertir requisitos en lenguaje natural en expresiones regulares practicas que puedes revisar, probar y ajustar.",
+  "blocks": {
+    "inputTitle": "De la Intencion al Patron",
+    "inputBody": "Describes lo que quieres validar en lenguaje natural y la app transforma esa solicitud en una propuesta concreta de regex.",
+    "generationTitle": "Salida Accionable",
+    "generationBody": "Cada resultado incluye el regex y una explicacion mixta: clara para entenderla rapido y tecnica para saber por que funciona.",
+    "validationTitle": "Verificacion Inmediata",
+    "validationBody": "Con el probador en vivo puedes escribir ejemplos y ver al instante si coinciden, para confirmar el comportamiento antes de usar el patron.",
+    "iterationTitle": "Iteracion Rapida",
+    "iterationBody": "Si el resultado se acerca pero no es exacto, puedes volver a pedirlo con restricciones y comparar salidas hasta que encaje con tus casos reales."
+  }
+}

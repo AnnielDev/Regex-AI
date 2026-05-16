@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #c0c1ff;
+  --color-secondary: #ddb7ff;
+  --color-tertiary: #ffb783;
+  --color-surface: #131315;
+  --color-background: #131315;
+  --color-on-primary: #1000a9;
+  --color-on-surface: #e5e1e4;
+  --color-on-surface-variant: #c7c4d7;
+  --color-on-background: #e5e1e4;
+
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 40px;
+  --spacing-gutter: 24px;
+  --spacing-container-max: 1200px;
+
+  --font-display: "Inter", sans-serif;
+  --font-headline-md: "Inter", sans-serif;
+  --font-body-lg: "Inter", sans-serif;
+  --font-body-md: "Inter", sans-serif;
+  --font-label-mono: "JetBrains Mono", monospace;
+  --font-code-block: "JetBrains Mono", monospace;
+
+  --text-display: 48px;
+  --text-display--line-height: 1.1;
+  --text-display--letter-spacing: -0.04em;
+  --text-display--font-weight: 600;
+  --text-headline-md: 20px;
+  --text-headline-md--line-height: 1.4;
+  --text-headline-md--font-weight: 500;
+  --text-body-lg: 16px;
+  --text-body-lg--line-height: 1.6;
+  --text-body-md: 14px;
+  --text-body-md--line-height: 1.5;
+  --text-label-mono: 12px;
+  --text-label-mono--line-height: 1.4;
+  --text-label-mono--letter-spacing: 0.02em;
+  --text-label-mono--font-weight: 500;
+}
+
+body {
+  background-color: #09090b;
+  color: #e5e1e4;
+  font-family: "Inter", sans-serif;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
+}
+
+.reflective-edge {
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.primary-glow:hover {
+  box-shadow: 0 0 20px rgba(192, 193, 255, 0.3);
+}
+
+.syntax-regex {
+  color: #8083ff;
+}
+
+.syntax-text {
+  color: #e5e1e4;
+}

@@ -1,0 +1,72 @@
+{
+  "hero": {
+    "title": "Generate Regex with AI",
+    "description": "Convert plain English into powerful regular expressions instantly. Optimized for performance and precision in your production codebase.",
+    "placeholder": "Example: regex to validate emails ending in gmail.com",
+    "generate": "Generate Regex",
+    "generating": "Generating..."
+  },
+  "actions": {
+    "copyRegex": "Copy regex",
+    "copyJson": "Copy as JSON"
+  },
+  "errors": {
+    "emptyPrompt": "Write what regex you need first.",
+    "invalidRegex": "The model returned an invalid regex.",
+    "requestFailed": "Could not generate regex right now."
+  },
+  "output": {
+    "title": "Generated Output",
+    "logicTitle": "Logic Explanation",
+    "logic": "This regular expression ensures the input starts with one or more alphanumeric characters or specific symbols (._%+-), followed by the literal {'@'}gmail.com domain, and ends immediately after.",
+    "tokenBreakdown": "Token Breakdown",
+    "anchorsAndFlags": "Anchors and Flags",
+    "edgeCases": "Edge Cases",
+    "performanceNotes": "Performance Notes",
+    "redosRisk": "ReDoS Risk",
+    "defaultTokenBreakdown": "The model did not provide token-level details.",
+    "defaultAnchorsFlags": "The model did not provide anchor and flag details.",
+    "defaultEdgeCases": "The model did not provide edge cases.",
+    "defaultPerformanceNotes": "The model did not provide performance notes.",
+    "defaultRedosRisk": "The model did not provide a ReDoS risk assessment."
+  },
+  "matches": {
+    "valid": "VALID MATCHES",
+    "invalid": "INVALID MATCHES",
+    "match": "MATCH",
+    "fail": "FAIL"
+  },
+  "tester": {
+    "title": "Live Tester",
+    "label": "TEST YOUR TEXT",
+    "result": "Full Match Found",
+    "count": "1 result",
+    "tokenTitle": "TOKEN BREAKDOWN"
+  },
+  "insights": {
+    "title": "AI Insights",
+    "description": "This pattern is 99.4% accurate for strict Gmail validation but does not account for subaddressing (+) in some edge cases.",
+    "button": "Optimize for Edge Cases"
+  },
+  "features": {
+    "performance": {
+      "title": "High Performance",
+      "description": "Non-backtracking patterns for security."
+    },
+    "redos": {
+      "title": "ReDoS Safe",
+      "description": "Scanned for regex denial of service flaws."
+    },
+    "languages": {
+      "title": "Multi-Language",
+      "description": "Exports for Python, JS, Go, and more."
+    }
+  },
+  "footer": {
+    "copy": "© 2024 RegexAI. Engineered for precision.",
+    "github": "GitHub",
+    "privacy": "Privacy",
+    "terms": "Terms",
+    "api": "API"
+  }
+}
