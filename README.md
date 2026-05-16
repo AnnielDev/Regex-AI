@@ -30,14 +30,12 @@ pnpm install
 
 ## Variables de entorno
 
-Crea un archivo `.env` en la raiz del proyecto:
+Configura tus variables de entorno locales con:
 
-```env
-VITE_GROQ_API_KEY=tu_api_key
-VITE_GROQ_MODEL=llama-3.3-70b-versatile
-```
+- una API key valida del proveedor de IA
+- (opcional) el modelo a utilizar
 
-`VITE_GROQ_MODEL` es opcional. Si no se define, se usa `llama-3.3-70b-versatile` por defecto.
+Nota: la app necesita una API key para poder generar regex.
 
 ## Ejecutar en desarrollo
 
