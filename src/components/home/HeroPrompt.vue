@@ -17,10 +17,11 @@
       ></div>
       <div class="glass-card relative rounded-xl p-xs">
         <textarea
-          :value="modelValue"
           class="min-h-[160px] w-full resize-none rounded-lg border-none bg-black/40 p-md font-body-lg text-body-lg placeholder:text-on-surface-variant/40 focus:ring-0"
+          :value="modelValue"
           :placeholder="t('home.hero.placeholder')"
           @input="onInput"
+          @keydown="onKeydown"
         ></textarea>
         <div class="flex justify-end border-t border-white/5 p-sm">
           <button
@@ -42,7 +43,7 @@
 <script setup lang="ts">
 import { useI18n } from "vue-i18n";
 
-defineProps<{
+const props = defineProps<{
   modelValue: string;
   isLoading: boolean;
 }>();
@@ -57,5 +58,16 @@ const { t } = useI18n();
 const onInput = (event: Event) => {
   const target = event.target as HTMLTextAreaElement;
   emit("update:modelValue", target.value);
+};
+
+const onKeydown = (event: KeyboardEvent) => {
+  if (props.isLoading) {
+    return;
+  }
+
+  if (event.key === "Enter" && !event.shiftKey) {
+    event.preventDefault();
+    emit("submit");
+  }
 };
 </script>

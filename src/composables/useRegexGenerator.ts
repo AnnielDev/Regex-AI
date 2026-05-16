@@ -103,7 +103,11 @@ const isMatch = computed(() => {
     };
   }
 
-  async function generateRegex() {
+async function generateRegex() {
+    if (isLoading.value) {
+      return;
+    }
+
     const input = prompt.value.trim();
     if (!input) {
       errorMessage.value = t("home.errors.emptyPrompt");
