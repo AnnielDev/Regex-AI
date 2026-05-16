@@ -22,7 +22,7 @@
         />
       </div>
       <div
-        class="flex items-center justify-between rounded-lg border p-md"
+        class="flex flex-col items-start gap-sm rounded-lg border p-md sm:flex-row sm:items-center sm:justify-between"
         :class="
           isMatch
             ? 'border-green-500/20 bg-green-500/10'

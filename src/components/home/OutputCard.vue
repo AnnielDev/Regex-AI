@@ -1,7 +1,7 @@
 <template>
   <div class="glass-card reflective-edge overflow-hidden rounded-xl">
     <div
-      class="flex items-center justify-between border-b border-white/10 bg-white/5 px-md py-sm"
+      class="flex flex-col items-start justify-between gap-sm border-b border-white/10 bg-white/5 px-md py-sm sm:flex-row sm:items-center"
     >
       <span
         class="font-label-mono text-label-mono uppercase tracking-wider text-on-surface-variant"

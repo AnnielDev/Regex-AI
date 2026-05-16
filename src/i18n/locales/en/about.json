@@ -1,4 +1,14 @@
 {
   "title": "About",
-  "description": "This route is an example page to expand your app structure."
+  "description": "RegexAI helps you turn plain-language requirements into practical regular expressions you can inspect, test, and refine.",
+  "blocks": {
+    "inputTitle": "From Intent to Pattern",
+    "inputBody": "You describe what you want to validate in natural language, and the app transforms that request into a concrete regex proposal.",
+    "generationTitle": "Actionable Output",
+    "generationBody": "Each result includes the regex itself plus a mixed explanation: clear enough to follow quickly, and technical enough to understand why it works.",
+    "validationTitle": "Immediate Verification",
+    "validationBody": "With the live tester, you can type examples and instantly see whether they match, so you can confirm behavior before using the pattern.",
+    "iterationTitle": "Fast Iteration Loop",
+    "iterationBody": "If the result is close but not exact, you can ask again with constraints and compare outputs until the pattern fits your real-world cases."
+  }
 }

@@ -1,7 +1,7 @@
 <template>
   <section class="mb-xl text-center">
     <h1
-      class="mb-md bg-linear-to-b from-white to-white/60 bg-clip-text font-display text-display text-transparent"
+      class="mb-md bg-linear-to-b from-white to-white/60 bg-clip-text font-display text-4xl text-transparent sm:text-display"
     >
       {{ t("home.hero.title") }}
     </h1>
@@ -24,7 +24,7 @@
         ></textarea>
         <div class="flex justify-end border-t border-white/5 p-sm">
           <button
-            class="primary-glow cursor-pointer flex items-center gap-sm rounded-lg bg-primary px-xl py-3 font-label-mono text-label-mono font-bold text-on-primary transition-all disabled:cursor-not-allowed disabled:opacity-60"
+            class="primary-glow flex w-full cursor-pointer items-center justify-center gap-sm rounded-lg bg-primary px-lg py-3 font-label-mono text-label-mono font-bold text-on-primary transition-all disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto sm:px-xl"
             :disabled="isLoading"
             @click="$emit('submit')"
           >

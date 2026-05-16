@@ -1,6 +1,6 @@
 <template>
   <div class="selection:bg-primary/30">
-    <main class="mx-auto max-w-container-max px-gutter pb-xl pt-32">
+    <main class="mx-auto max-w-container-max px-4 pb-xl pt-36 sm:px-gutter md:pt-32">
       <HeroPrompt v-model="prompt" :is-loading="isLoading" @submit="generateRegex" />
 
       <section class="grid grid-cols-1 gap-xl lg:grid-cols-12">
