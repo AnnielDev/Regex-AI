@@ -77,7 +77,7 @@ const isMatch = computed(() => {
   }
 
   function parsePayload(text: string): RegexPayload {
-    const parsed = JSON.parse(text) as Partial<RegexPayload>;
+    const parsed = parseModelJson(text) as Partial<RegexPayload>;
     if (!parsed.regex || !parsed.explanation || typeof parsed.explanation !== "object") {
       throw new Error(t("home.errors.requestFailed"));
     }
@@ -101,6 +101,41 @@ const isMatch = computed(() => {
       validExamples: Array.isArray(parsed.validExamples) && parsed.validExamples.length > 0 ? parsed.validExamples : ["sample@example.com"],
       invalidExamples: Array.isArray(parsed.invalidExamples) && parsed.invalidExamples.length > 0 ? parsed.invalidExamples : ["invalid"],
     };
+  }
+
+  function parseModelJson(text: string) {
+    const normalized = text.trim();
+
+    try {
+      return JSON.parse(normalized);
+    } catch {
+      const extracted = extractJsonObject(normalized);
+      if (!extracted) {
+        throw new Error(t("home.errors.requestFailed"));
+      }
+
+      try {
+        return JSON.parse(extracted);
+      } catch {
+        const repaired = repairInvalidEscapes(extracted);
+        return JSON.parse(repaired);
+      }
+    }
+  }
+
+  function extractJsonObject(text: string) {
+    const firstBrace = text.indexOf("{");
+    const lastBrace = text.lastIndexOf("}");
+
+    if (firstBrace === -1 || lastBrace === -1 || lastBrace <= firstBrace) {
+      return "";
+    }
+
+    return text.slice(firstBrace, lastBrace + 1);
+  }
+
+  function repairInvalidEscapes(text: string) {
+    return text.replace(/(?<!\\)\\(?!["\\/bfnrtu])/g, "\\\\");
   }
 
 async function generateRegex() {
