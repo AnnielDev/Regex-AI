@@ -18,7 +18,7 @@ importers:
         specifier: 3.5.34
         version: 3.5.34(typescript@6.0.2)
       vue-i18n:
-        specifier: ^11.4.2
+        specifier: 11.4.2
         version: 11.4.2(vue@3.5.34(typescript@6.0.2))
       vue-router:
         specifier: 4.6.4
@@ -33,9 +33,6 @@ importers:
       '@vue/tsconfig':
         specifier: 0.9.1
         version: 0.9.1(typescript@6.0.2)(vue@3.5.34(typescript@6.0.2))
-      only-allow:
-        specifier: 1.2.2
-        version: 1.2.2
       typescript:
         specifier: 6.0.2
         version: 6.0.2
@@ -491,10 +488,6 @@ packages:
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
     hasBin: true
 
-  only-allow@1.2.2:
-    resolution: {integrity: sha512-uxyNYDsCh5YIJ780G7hC5OHjVUr9reHsbZNMM80L9tZlTpb3hUzb36KXgW4ZUGtJKQnGA3xegmWg1BxhWV0jJA==}
-    hasBin: true
-
   path-browserify@1.0.1:
     resolution: {integrity: sha512-b7uo2UCUOYZcnF/3ID0lulOJi/bafxa1xPe7ZPsammBSpjSWQkjNxlt635YGS2MiR9GjvuXCtz2emr3jbsz98g==}
 
@@ -610,10 +603,6 @@ packages:
     peerDependenciesMeta:
       typescript:
         optional: true
-
-  which-pm-runs@1.1.0:
-    resolution: {integrity: sha512-n1brCuqClxfFfq/Rb0ICg9giSZqCS+pLtccdag6C2HyufBrh3fBOiy9nb6ggRMvWOVH5GrdJskj5iGTZNxd7SA==}
-    engines: {node: '>=4'}
 
 snapshots:
 
@@ -994,10 +983,6 @@ snapshots:
 
   nanoid@3.3.12: {}
 
-  only-allow@1.2.2:
-    dependencies:
-      which-pm-runs: 1.1.0
-
   path-browserify@1.0.1: {}
 
   picocolors@1.1.1: {}
@@ -1091,5 +1076,3 @@ snapshots:
       '@vue/shared': 3.5.34
     optionalDependencies:
       typescript: 6.0.2
-
-  which-pm-runs@1.1.0: {}
