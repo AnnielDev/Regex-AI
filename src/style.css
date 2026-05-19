@@ -72,3 +72,35 @@ body {
 .syntax-text {
   color: #e5e1e4;
 }
+
+.page-transition-enter-active,
+.page-transition-leave-active {
+  transition: opacity 260ms ease, transform 260ms ease;
+}
+
+.page-transition-enter-from,
+.page-transition-leave-to {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.page-transition-enter-to,
+.page-transition-leave-from {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page-transition-enter-active,
+  .page-transition-leave-active {
+    transition: none;
+  }
+
+  .page-transition-enter-from,
+  .page-transition-leave-to,
+  .page-transition-enter-to,
+  .page-transition-leave-from {
+    opacity: 1;
+    transform: none;
+  }
+}
