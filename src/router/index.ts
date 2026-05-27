@@ -1,5 +1,10 @@
-import { createRouter, createWebHistory, type RouteRecordRaw } from "vue-router";
+import {
+  createRouter,
+  createWebHistory,
+  type RouteRecordRaw,
+} from "vue-router";
 import i18n from "@/i18n";
+import { trackPageview } from "@/utils/analytics";
 
 const routes: RouteRecordRaw[] = [
   {
@@ -38,7 +43,9 @@ const router = createRouter({
 
 router.afterEach((to) => {
   const titleKey = to.meta.titleKey as string | undefined;
-  document.title = titleKey ? (i18n.global as any).t(titleKey) : "Regex AI";
+  const title = titleKey ? (i18n.global as any).t(titleKey) : "Regex AI";
+  document.title = title;
+  trackPageview(to.fullPath, title);
 });
 
 export default router;
