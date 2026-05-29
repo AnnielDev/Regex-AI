@@ -2,7 +2,7 @@
   <div class="mb-lg flex justify-center">
     <ins
       class="adsbygoogle"
-      :data-ad-client="`ca-${publisherId}`"
+      :data-ad-client="publisherId"
       :data-ad-slot="slot"
       :data-ad-format="format"
       data-full-width-responsive="true"
