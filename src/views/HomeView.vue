@@ -3,9 +3,6 @@
     <main
       class="mx-auto max-w-container-max px-4 pb-xl pt-36 sm:px-gutter md:pt-32"
     >
-      <!-- Google AdSense Banner -->
-      <AdSenseAd slot="8370637289" format="horizontal" placement="home-top" />
-
       <HeroPrompt
         v-model="prompt"
         :is-loading="isLoading"
@@ -48,6 +45,8 @@
         <div class="space-y-lg lg:col-span-4">
           <LiveTesterCard v-model="testInput" :is-match="isMatch" />
         </div>
+        <!-- Google AdSense Banner -->
+        <AdSenseAd slot="8370637289" format="horizontal" placement="home-top" />
       </section>
     </main>
   </div>
