@@ -2,9 +2,10 @@
   <div class="mb-lg flex justify-center">
     <ins
       class="adsbygoogle"
+      style="display: inline-block; width: 728px; height: 90px"
       :data-ad-client="publisherId"
       :data-ad-slot="slot"
-      :data-ad-format="format"
+      data-ad-format="horizontal"
       data-full-width-responsive="true"
     />
   </div>

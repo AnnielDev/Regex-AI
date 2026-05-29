@@ -10,8 +10,9 @@ export function initAdSense(): void {
   const script = document.createElement("script");
   script.id = "google-adsense";
   script.async = true;
+  // Publisher ID already includes ca-pub- prefix, don't add it again
   script.src =
-    "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-" +
+    "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=" +
     publisherId;
   script.crossOrigin = "anonymous";
   document.head.appendChild(script);
