@@ -18,11 +18,20 @@ export function initAdSense(): void {
 }
 
 export function pushAd(): void {
-  if (typeof window !== "undefined" && (window as any).adsbygoogle) {
-    try {
-      (window as any).adsbygoogle.push({});
-    } catch (error) {
-      console.debug("AdSense push failed:", error);
+  if (typeof window === "undefined") return;
+
+  // Retry mechanism for script readiness
+  const checkAndPush = () => {
+    if ((window as any).adsbygoogle) {
+      try {
+        (window as any).adsbygoogle.push({});
+      } catch (error) {
+        console.debug("AdSense push failed:", error);
+      }
     }
-  }
+  };
+
+  // Try immediately, then retry after a short delay
+  checkAndPush();
+  setTimeout(checkAndPush, 100);
 }
