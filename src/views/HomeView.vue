@@ -1,11 +1,26 @@
 <template>
   <div class="selection:bg-primary/30">
-    <main class="mx-auto max-w-container-max px-4 pb-xl pt-36 sm:px-gutter md:pt-32">
-      <HeroPrompt v-model="prompt" :is-loading="isLoading" @submit="generateRegex" />
+    <main
+      class="mx-auto max-w-container-max px-4 pb-xl pt-36 sm:px-gutter md:pt-32"
+    >
+      <!-- Google AdSense Banner -->
+      <AdSenseAd slot="8370637289" format="horizontal" placement="home-top" />
+
+      <HeroPrompt
+        v-model="prompt"
+        :is-loading="isLoading"
+        @submit="generateRegex"
+      />
 
       <section class="grid grid-cols-1 gap-xl lg:grid-cols-12">
         <div class="space-y-lg lg:col-span-8">
-          <OutputCard :regex="generated.regex" :explanation="generated.explanation" :error-message="errorMessage" @copy-regex="copyRegex" @copy-json="copyJson" />
+          <OutputCard
+            :regex="generated.regex"
+            :explanation="generated.explanation"
+            :error-message="errorMessage"
+            @copy-regex="copyRegex"
+            @copy-json="copyJson"
+          />
 
           <div class="grid grid-cols-1 gap-lg md:grid-cols-2">
             <ExamplesCard
@@ -39,6 +54,7 @@
 </template>
 
 <script setup lang="ts">
+import AdSenseAd from "@/components/AdSenseAd.vue";
 import ExamplesCard from "@/components/home/ExamplesCard.vue";
 import HeroPrompt from "@/components/home/HeroPrompt.vue";
 import LiveTesterCard from "@/components/home/LiveTesterCard.vue";
@@ -48,5 +64,15 @@ import { useI18n } from "vue-i18n";
 
 const { t } = useI18n();
 
-const { prompt, testInput, isLoading, errorMessage, generated, isMatch, generateRegex, copyRegex, copyJson } = useRegexGenerator();
+const {
+  prompt,
+  testInput,
+  isLoading,
+  errorMessage,
+  generated,
+  isMatch,
+  generateRegex,
+  copyRegex,
+  copyJson,
+} = useRegexGenerator();
 </script>
