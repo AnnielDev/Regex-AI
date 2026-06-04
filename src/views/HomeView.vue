@@ -46,7 +46,7 @@
           <LiveTesterCard v-model="testInput" :is-match="isMatch" />
         </div>
         <!-- Google AdSense Banner -->
-        <AdSenseAd slot="8370637289" format="horizontal" placement="home-top" />
+        <AdSenseAd slot="5793177917" format="horizontal" placement="home-top" />
       </section>
     </main>
   </div>
