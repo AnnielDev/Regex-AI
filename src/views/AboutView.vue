@@ -47,7 +47,7 @@
       </div>
     </section>
     <!-- Google AdSense Banner -->
-    <AdSenseAd slot="3255247556" format="horizontal" placement="home-top" />
+    <AdSenseAd slot="8735601109" format="horizontal" placement="home-top" />
   </main>
 </template>
 
