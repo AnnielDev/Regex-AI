@@ -19,7 +19,7 @@ type GroqResponse = {
 };
 
 const GROQ_URL = "https://api.groq.com/openai/v1/chat/completions";
-const DEFAULT_MODEL = "llama-3.3-70b-versatile";
+const DEFAULT_MODEL = "meta-llama/llama-4-scout-17b-16e-instruct";
 
 export function getGroqConfig() {
   const apiKey = import.meta.env.VITE_GROQ_API_KEY as string | undefined;
